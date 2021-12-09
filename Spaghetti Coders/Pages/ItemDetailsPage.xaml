@@ -47,7 +47,9 @@
                 Grid.Column="1"/>
         </Grid>
 
-        <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding ImageSource, ElementName=root}" />
+        <Grid Grid.Row="1" Height="250" Width="250">
+            <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Source="{Binding ImageSource, ElementName=root}" Stretch="UniformToFill" />
+        </Grid>
 
         <Image Grid.Row="2" Margin="0,14,0,6" HorizontalAlignment="Center" Source="/Images/divider.png" />
 

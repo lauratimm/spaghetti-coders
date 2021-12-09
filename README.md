@@ -6,6 +6,13 @@ Group: 17
 
 Members: Laura Timm, Trevor Le, Jacky Lam, Maggie Ma, Yihan Wei
 
+Github URL: https://github.com/trvrle/spaghetti-coders
+
+### __Prerequisites:__
+1. Download & install Visual Studio 2019 with all the packages required to run a WPF application
+2. Disable UI Debugging Tools for XAML by going to Debug > Options > Debugging > General > uncheck the 'Enable UI Debugging Tools for XAML' checkbox
+3. Run our application by clicking on the play button
+
 ### __Introduction:__
 A company wants to design an ordering system for restaurants/bars, allowing users to interact with the menu and order their food from their table directly. We created a system that users can use their phone to view items on the menu, select and modify those items, and order items from their table. They can add and order items at any point in their visit. Once they have completed their meal they can view their receipt and then pay with the restaurant's current payment system.
 
@@ -20,10 +27,10 @@ __Main Screen:__
 * View item in more detail: to view an item in more detail, click the item on the main screen 
 * Search:  You can dynamically search by clicking the search box and type what you are looking for. When you click the search box the text clears, the items will show up as you are typing, as the search function looks for that string in the item titles. The items show up on a separate page from the main page and to exit the search function you click the "X" next to the search box.
 
-__Item Detain Page:__
+__Item Details Page:__
    * You can either add the item to cart as is from this page by selecting "add item" or add modifications to the item by clicking the "modify item" button.
 
-__Modificaiton Page:__
+__Modification Page:__
    * Select Modifications (pre-set modifications or write your own): The modifications are set to how the order comes originally for each item you can add more or less of something from the common modifications, If the modification you are looking for doesn't exist you can write you own in the text box. *a phone keyboard pops up to view placement press enter to close the keyboard when you are done*
    * Add Item to order from modification page: when item is added you will return to the main screen
 

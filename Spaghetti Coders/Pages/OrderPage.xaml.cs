@@ -75,16 +75,14 @@ namespace Spaghetti_Coders.Pages
 
         private void OrderPage_Loaded( object sender, RoutedEventArgs e )
         {
-            OrderButton.IsEnabled = OrderItemData.CanOrder();
-            PayButton.IsEnabled = OrderItemData.CanPay();
-            
-            Subtotal = OrderItemData.GetTotalOrderItemPrice();
+            UpdatePage();
 
             OrderList.UpdateOrderPage += new OrderList.UpdateOrderPageDelegate( UpdatePage );
         }
 
         private void UpdatePage()
         {
+            EmptyOrderMessage.Visibility = OrderItemData.Count == 0 ? Visibility.Visible : Visibility.Hidden;
             OrderButton.IsEnabled = OrderItemData.CanOrder();
             PayButton.IsEnabled = OrderItemData.CanPay();
             Subtotal = OrderItemData.GetTotalOrderItemPrice();

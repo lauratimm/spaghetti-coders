@@ -30,6 +30,14 @@ namespace Spaghetti_Coders.Controls
 
         public event OnSearchTextChangedDelegate OnSearchTextChanged;
 
+        public delegate void OnSearchBoxLostFocusDelegate();
+
+        public event OnSearchBoxLostFocusDelegate OnSearchBoxLostFocus;
+
+        public delegate void OnSearchBoxGotFocusDelegate();
+
+        public event OnSearchBoxGotFocusDelegate OnSearchBoxGotFocus;
+
         public SearchBox()
         {
             InitializeComponent();
@@ -38,9 +46,11 @@ namespace Spaghetti_Coders.Controls
         private void SearchBox_GotFocus(object sender, RoutedEventArgs e)
         {
             TextBox searchBox = (TextBox)sender;
-            searchBox.Text = string.Empty;
+            if (searchBox.Text.Equals("Search..."))
+                searchBox.Text = string.Empty;
             OnSearchViewActivated.Invoke();
             ActivateSearchView();
+            OnSearchBoxGotFocus.Invoke();
         }
 
         private void SearchBox_LostFocus( object sender, RoutedEventArgs e )
@@ -48,6 +58,7 @@ namespace Spaghetti_Coders.Controls
             TextBox searchBox = (TextBox)sender;
             if(searchBox.Text.Equals(string.Empty))
                 searchBox.Text = "Search...";
+            OnSearchBoxLostFocus.Invoke();
         }
 
         private void SearchBox_TextChanged( object sender, RoutedEventArgs e)

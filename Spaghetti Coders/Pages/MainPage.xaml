@@ -49,5 +49,9 @@
             <TabItem Name="DrinksTab" Header="Drinks" Background="#d57174" Width="75"/>
         </TabControl>
 
+        <Grid Grid.Row="1" VerticalAlignment="Bottom" Visibility="Hidden" x:Name="SearchKeyboard">
+            <Image Source="/Images/keyboard.png"/>
+        </Grid>
+
     </Grid>
 </Page>

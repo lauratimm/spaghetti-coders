@@ -45,8 +45,18 @@
                 VerticalAlignment="Center"/>
         </Grid>
 
-        <Grid Grid.Row="1">
-            <local:OrderList x:Name="OrderList" />
+        <local:OrderList Grid.Row="1" x:Name="OrderList" />
+
+        <Grid x:Name="EmptyOrderMessage" Grid.Row="1" VerticalAlignment="Center" Width="300">
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Your order is empty" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Row="1" Text="Add food items to your order and see them here" FontSize="18" Foreground="DarkSlateGray" HorizontalAlignment="Center" TextAlignment="Center" TextWrapping="Wrap"/>
+
         </Grid>
 
         <StackPanel Orientation="Vertical" Grid.Row="2">
